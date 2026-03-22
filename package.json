@@ -17,7 +17,7 @@
     "clsx": "^2.1.1",
     "gsap": "^3.14.2",
     "lucide-react": "^0.577.0",
-    "next": "15.4.6",
+    "next": "15.4.10",
     "postcss-nesting": "^14.0.0",
     "radix-ui": "^1.4.3",
     "react": "19.1.0",
