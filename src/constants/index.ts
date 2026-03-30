@@ -37,37 +37,48 @@ const counterItems = [
 
 const logoIconsList = [
   {
-    imgPath: "/images/logos/company-logo-1.png",
+    name: "MongoDB",
+    imgPath: "/images/tech-stack/mongodb.png",
+  },
+  // {
+  //   name: "Express.js",
+  //   imgPath: "/images/tech-stack/express.png",
+  // },
+  {
+    name: "React.js",
+    imgPath: "/images/tech-stack/react.png",
   },
   {
-    imgPath: "/images/logos/company-logo-2.png",
+    name: "Node.js",
+    imgPath: "/images/tech-stack/node.png",
   },
   {
-    imgPath: "/images/logos/company-logo-3.png",
+    name: "Redux",
+    imgPath: "/images/tech-stack/redux.png",
   },
   {
-    imgPath: "/images/logos/company-logo-4.png",
+    name: "Next.js",
+    imgPath: "/images/tech-stack/nextjs.png",
   },
   {
-    imgPath: "/images/logos/company-logo-5.png",
+    name: "TypeScript",
+    imgPath: "/images/tech-stack/typescript.png",
   },
   {
-    imgPath: "/images/logos/company-logo-6.png",
+    name: "Tailwind CSS",
+    imgPath: "/images/tech-stack/tailwind.png",
   },
   {
-    imgPath: "/images/logos/company-logo-7.png",
+    name: "Mongoose",
+    imgPath: "/images/tech-stack/mongoose.png",
   },
   {
-    imgPath: "/images/logos/company-logo-8.png",
+    name: "Postman",
+    imgPath: "/images/tech-stack/postman.png",
   },
   {
-    imgPath: "/images/logos/company-logo-9.png",
-  },
-  {
-    imgPath: "/images/logos/company-logo-10.png",
-  },
-  {
-    imgPath: "/images/logos/company-logo-11.png",
+    name: "Git",
+    imgPath: "/images/tech-stack/git.png",
   },
 ];
 

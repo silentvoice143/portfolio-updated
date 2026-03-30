@@ -37,7 +37,7 @@ const HeroExperience = () => {
       >
         <Room />
       </group>
-      <Particles count={100} />
+      {/* <Particles count={100} /> */}
     </Canvas>
   );
 };

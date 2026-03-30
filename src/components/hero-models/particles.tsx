@@ -3,47 +3,54 @@
 
 import { useRef, useMemo } from "react";
 import { useFrame } from "@react-three/fiber";
+import * as THREE from "three";
 
 const Particles = ({ count = 200 }) => {
   const mesh = useRef(null);
 
+  // 1. Memoize the particle metadata
   const particles = useMemo(() => {
     const temp = [];
     for (let i = 0; i < count; i++) {
       temp.push({
-        position: [
-          (Math.random() - 0.5) * 10,
-          Math.random() * 10 + 5,
-          (Math.random() - 0.5) * 10,
-        ],
         speed: 0.003 + Math.random() * 0.002,
         driftX: (Math.random() - 0.5) * 0.002,
         driftZ: (Math.random() - 0.5) * 0.002,
-        phase: Math.random() * Math.PI * 2, // for flicker
+        phase: Math.random() * Math.PI * 2,
       });
     }
     return temp;
   }, [count]);
 
+  // 2. Memoize the Float32Array so it's only created ONCE
+  const initialPositions = useMemo(() => {
+    const pos = new Float32Array(count * 3);
+    for (let i = 0; i < count; i++) {
+      pos[i * 3] = (Math.random() - 0.5) * 10;
+      pos[i * 3 + 1] = Math.random() * 10 + 5;
+      pos[i * 3 + 2] = (Math.random() - 0.5) * 10;
+    }
+    return pos;
+  }, [count]);
+
   useFrame(({ clock }) => {
-    const positions = mesh.current.geometry.attributes.position.array;
+    if (!mesh.current) return;
+
+    // Access the existing attribute instead of creating a new one
+    const attr = mesh.current.geometry.attributes.position;
+    const positions = attr.array;
     const time = clock.getElapsedTime();
 
     for (let i = 0; i < count; i++) {
+      const p = particles[i];
       let x = positions[i * 3];
       let y = positions[i * 3 + 1];
       let z = positions[i * 3 + 2];
 
-      const p = particles[i];
-
-      // downward movement
       y -= p.speed;
-
-      // horizontal floating
       x += p.driftX + Math.sin(time + p.phase) * 0.001;
       z += p.driftZ + Math.cos(time + p.phase) * 0.001;
 
-      // reset when out of view
       if (y < -2) {
         y = Math.random() * 10 + 5;
         x = (Math.random() - 0.5) * 10;
@@ -55,14 +62,7 @@ const Particles = ({ count = 200 }) => {
       positions[i * 3 + 2] = z;
     }
 
-    mesh.current.geometry.attributes.position.needsUpdate = true;
-  });
-
-  const positions = new Float32Array(count * 3);
-  particles.forEach((p, i) => {
-    positions[i * 3] = p.position[0];
-    positions[i * 3 + 1] = p.position[1];
-    positions[i * 3 + 2] = p.position[2];
+    attr.needsUpdate = true; // Tell Three.js to send only the data changes to GPU
   });
 
   return (
@@ -71,8 +71,9 @@ const Particles = ({ count = 200 }) => {
         <bufferAttribute
           attach="attributes-position"
           count={count}
-          array={positions}
+          array={initialPositions}
           itemSize={3}
+          usage={THREE.DynamicDrawUsage} // 🔥 Optimization: Tells GPU this data changes often
         />
       </bufferGeometry>
 
@@ -82,6 +83,7 @@ const Particles = ({ count = 200 }) => {
         transparent
         opacity={0.8}
         depthWrite={false}
+        blending={THREE.AdditiveBlending} // Optional: makes them look "glowy"
       />
     </points>
   );
