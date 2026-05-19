@@ -13,7 +13,7 @@ const Experience = () => {
   useGSAP(() => {
     // Loop through each timeline card and animate them in
     // as the user scrolls to each card
-    gsap.utils.toArray(".timeline-card").forEach((card) => {
+    gsap.utils.toArray(".timeline-card").forEach((card: any) => {
       // Animate the card coming in from the left
       // and fade in
       gsap.from(card, {
@@ -65,7 +65,7 @@ const Experience = () => {
 
     // Loop through each expText element and animate them in
     // as the user scrolls to each text element
-    gsap.utils.toArray(".expText").forEach((text) => {
+    gsap.utils.toArray(".expText").forEach((text: any) => {
       // Animate the text opacity from 0 to 1
       // and move it from the left to its final position
       // over 1 second with a power2 ease-in-out curve
