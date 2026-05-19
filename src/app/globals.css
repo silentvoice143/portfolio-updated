@@ -43,7 +43,8 @@
 
 html,
 body {
-  width: 100dvw;
+  width: 100vw;
+  height: auto;
   overflow-x: hidden;
   background-color: black;
   color: white;
@@ -52,7 +53,9 @@ body {
 }
 
 section {
-  width: 100dvw;
+  width: 100vw;
+  overflow-x: hidden;
+  position: relative;
 }
 
 @theme {
