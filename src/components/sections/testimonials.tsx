@@ -7,8 +7,8 @@ const Testimonials = () => {
     <section id="testimonials" className="flex-center section-padding">
       <div className="w-full h-full md:px-10 px-5">
         <TitleHeader
-          title="What People Say About Me?"
-          sub="⭐️ Customer feedback highlights"
+          title="What I Bring to a Team?"
+          sub="⭐️ Building reliable products, solving complex problems, and delivering impact"
         />
 
         <div className="grid-3-cols mt-12!">
@@ -16,13 +16,13 @@ const Testimonials = () => {
             <div key={index} className="h-full">
               <GlowCard card={testimonial} index={index}>
                 <div className="flex items-center gap-3">
-                  <div>
+                  {/* <div>
                     <img
                       src={testimonial.imgPath}
                       alt={testimonial.name}
                       className="w-12 h-12 rounded-full object-cover"
                     />
-                  </div>
+                  </div> */}
 
                   <div>
                     <p className="font-bold">{testimonial.name}</p>

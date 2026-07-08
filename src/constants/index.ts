@@ -30,9 +30,9 @@ const words = [
 
 const counterItems = [
   { value: 2, suffix: "+", label: "Years of Experience" },
-  { value: 10, suffix: "+", label: "Satisfied Clients" },
-  { value: 12, suffix: "+", label: "Completed Projects" },
-  { value: 20, suffix: "+", label: "Features Delivered" },
+  { value: 10, suffix: "+", label: "Production Projects" },
+  { value: 50, suffix: "+", label: "Features Delivered" },
+  { value: 15, suffix: "+", label: "Technologies Used" },
 ];
 
 const logoIconsList = [
@@ -159,41 +159,73 @@ const techStackIcons = [
 const expCards = [
   {
     review:
-      "Adrian brought creativity and technical expertise to the team, significantly improving our frontend performance. His work has been invaluable in delivering faster experiences.",
-    imgPath: "/images/exp1.png",
-    logoPath: "/images/logo1.png",
+      "Delivered production-ready web applications, scalable frontend architecture, interactive dashboards, authentication systems, and real-time communication features.",
+
+    imgPath: "/images/experience/atticbits.png",
+    logoPath: "/images/logos/atticbits.svg",
+
     title: "Frontend Developer",
-    date: "January 2023 - Present",
+    company: "Atticbits Solutions Pvt. Ltd.",
+    date: "2024 - Present",
+
     responsibilities: [
-      "Developed and maintained user-facing features for the Hostinger website.",
-      "Collaborated closely with UI/UX designers to ensure seamless user experiences.",
-      "Optimized web applications for maximum speed and scalability.",
+      "Developed 5+ high-performance web applications using React.js, Next.js, and Tailwind CSS, reducing UI development time by 40%.",
+
+      "Architected global state management for 10+ product features using Redux Toolkit, reducing production bugs by 30%.",
+
+      "Engineered complex data visualizations and interactive dashboards using Chart.js, D3.js, and JointJS.",
+
+      "Implemented Role-Based Access Control (RBAC) and JWT authentication, securing platform access for 1,000+ users.",
+
+      "Designed reusable UI component libraries using Figma and ShadCN, achieving consistent design implementation across application modules.",
+
+      "Integrated real-time audio and video calling features using ZegoCloud SDK.",
     ],
   },
+
   {
     review:
-      "Adrian’s contributions to Docker's web applications have been outstanding. He approaches challenges with a problem-solving mindset.",
-    imgPath: "/images/exp2.png",
-    logoPath: "/images/logo2.png",
-    title: "Full Stack Developer",
-    date: "June 2020 - December 2023",
+      "Managed end-to-end product development workflows, transforming business requirements and designs into production-ready full-stack applications.",
+
+    imgPath: "/images/experience/freelance.png",
+    logoPath: "/images/logos/freelance.png",
+
+    title: "Full-Stack Software Developer",
+    company: "Freelance",
+    date: "2024 - Present",
+
     responsibilities: [
-      "Led the development of Docker's web applications, focusing on scalability.",
-      "Worked with backend engineers to integrate APIs seamlessly with the frontend.",
-      "Contributed to open-source projects that were used with the Docker ecosystem.",
+      "Led end-to-end design-to-development workflows while collaborating with stakeholders and improving user onboarding efficiency by 30%.",
+
+      "Created high-fidelity Figma prototypes and transformed designs into production-ready React.js and Next.js applications.",
+
+      "Delivered responsive and maintainable web applications based on business and product requirements.",
+
+      "Worked across frontend development, application architecture, API integration, and production delivery.",
     ],
   },
+
   {
     review:
-      "Adrian’s work on Appwrite’s mobile app brought a high level of quality and efficiency. He delivered solutions that enhanced our mobile experience & meet our product goals.",
-    imgPath: "/images/exp3.png",
-    logoPath: "/images/logo3.png",
-    title: "React Native Developer",
-    date: "March 2019 - May 2020",
+      "Built responsive web platforms and backend services while gaining hands-on experience delivering client-facing products in a professional development environment.",
+
+    imgPath: "/images/experience/baoiam.png",
+    logoPath: "/images/logos/baoiam.jpg",
+
+    title: "Website Developer Intern",
+    company: "Baoiam Innovations Pvt. Ltd.",
+    date: "Oct 2023 - Jan 2024",
+
     responsibilities: [
-      "Built cross-platform mobile apps using React Native, integrating with Appwrite's backend services.",
-      "Improved app performance and user experience through code optimization and testing.",
-      "Coordinated with the product team to implement features based on feedback.",
+      "Built responsive web platforms using HTML5, CSS3, JavaScript, and Tailwind CSS.",
+
+      "Engineered backend REST APIs with OTP verification using Node.js and Express.js.",
+
+      "Contributed to the development and delivery of the Baoiam Official Site.",
+
+      "Worked on the Divueens platform as part of the development team.",
+
+      "Gained hands-on experience building, integrating, debugging, and delivering client-facing web applications.",
     ],
   },
 ];
@@ -215,46 +247,46 @@ const expLogos = [
 
 const testimonials = [
   {
-    name: "Esther Howard",
-    mentions: "@estherhoward",
+    name: "Product Development",
+    mentions: "Frontend Engineering",
     review:
-      "I can’t say enough good things about Adrian. He was able to take our complex project requirements and turn them into a seamless, functional website. His problem-solving abilities are outstanding.",
-    imgPath: "/images/client1.png",
+      "Focused on transforming complex product requirements into responsive, maintainable, and production-ready user interfaces.",
+    imgPath: "/images/testimonial1.png",
   },
   {
-    name: "Wade Warren",
-    mentions: "@wadewarren",
+    name: "Engineering Quality",
+    mentions: "Scalable Architecture",
     review:
-      "Working with Adrian was a fantastic experience. He transformed our outdated website into a modern, user-friendly platform. His attention to detail and commitment to quality are unmatched. Highly recommend him for any web dev projects.",
-    imgPath: "/images/client3.png",
+      "Experienced in building reusable component systems and scalable application architecture that improves development speed and maintainability.",
+    imgPath: "/images/testimonial2.png",
   },
   {
-    name: "Guy Hawkins",
-    mentions: "@guyhawkins",
+    name: "Problem Solving",
+    mentions: "Complex Features",
     review:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    imgPath: "/images/client2.png",
+      "Comfortable working on challenging engineering problems including interactive data visualizations, authentication systems, real-time communication, and offline-first applications.",
+    imgPath: "/images/testimonial3.png",
   },
   {
-    name: "Marvin McKinney",
-    mentions: "@marvinmckinney",
+    name: "Full-Stack Development",
+    mentions: "End-to-End Delivery",
     review:
-      "Adrian was a pleasure to work with. He turned our outdated website into a fresh, intuitive platform that’s both modern and easy to navigate. Fantastic work overall.",
-    imgPath: "/images/client5.png",
+      "Able to take products from requirements and UI design through frontend development, backend APIs, database integration, deployment, and production debugging.",
+    imgPath: "/images/testimonial4.png",
   },
   {
-    name: "Floyd Miles",
-    mentions: "@floydmiles",
+    name: "Mobile Engineering",
+    mentions: "React Native",
     review:
-      "Adrian’s expertise in web development is truly impressive. He delivered a robust and scalable solution for our e-commerce site, and our online sales have significantly increased since the launch. He’s a true professional!",
-    imgPath: "/images/client4.png",
+      "Experienced in delivering cross-platform mobile applications with offline storage, native integrations, notifications, monetization, and performance-focused architecture.",
+    imgPath: "/images/testimonial5.png",
   },
   {
-    name: "Albert Flores",
-    mentions: "@albertflores",
+    name: "Continuous Learning",
+    mentions: "Engineering Growth",
     review:
-      "Adrian was a pleasure to work with. He understood our requirements perfectly and delivered a website that exceeded our expectations. His skills in both frontend and backend dev are top-notch.",
-    imgPath: "/images/client6.png",
+      "Constantly exploring deeper areas of software engineering, from native mobile development and backend systems to data visualization and AI-powered product features.",
+    imgPath: "/images/testimonial6.png",
   },
 ];
 
