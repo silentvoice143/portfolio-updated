@@ -294,18 +294,21 @@ const socialImgs = [
   {
     name: "insta",
     imgPath: "/images/insta.png",
+    link: "https://www.instagram.com/blazinguy_?utm_source=qr&igsh=czI5NTB5bmRqODBh",
   },
-  {
-    name: "fb",
-    imgPath: "/images/fb.png",
-  },
-  {
-    name: "x",
-    imgPath: "/images/x.png",
-  },
+  // {
+  //   name: "fb",
+  //   imgPath: "/images/fb.png",
+  // },
+  // {
+  //   name: "x",
+  //   imgPath: "/images/x.png",
+
+  // },
   {
     name: "linkedin",
     imgPath: "/images/linkedin.png",
+    link: "https://www.linkedin.com/in/satyam-kumar-550b4025a/",
   },
 ];
 
